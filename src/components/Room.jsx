@@ -2,15 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt'
 
-// Helper function to generate random IDs
-function randomID(len = 5) {
-    const chars = '12345qwertyuiopasdfgh67890jklmnbvcxzMNBVCZXASDQWERTYHGFUIOLKJP'
-    let result = ''
-    for (let i = 0; i < len; i++) {
-        result += chars.charAt(Math.floor(Math.random() * chars.length))
-    }
-    return result
-}
 
 const Room = () => {
     const { roomId } = useParams()
@@ -66,7 +57,7 @@ const Room = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="w-screen h-screen bg-gradient-to-r from-neutral-400 via-neutral-700 to-neutral-950">
+        <div className="w-screen h-screen bg-linear-to-r from-neutral-400 via-neutral-700 to-neutral-950">
             <div className="absolute top-4 left-4 text-gray-200 z-20">
                 <div className="text-3xl text-gradient-to-b from-gray-200 via-gray-400 to-gray-600 drop-shadow-md font-bold select-none " onClick={()=>navigate("/")}>
                     NamasteCam
